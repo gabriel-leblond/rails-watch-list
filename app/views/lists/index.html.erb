@@ -1,0 +1,25 @@
+<div class="hero">
+<p class="hero-text">transform your
+cinematic experience</p>
+</div>
+
+
+
+
+
+<div class="list-grid-cont-4">
+<p class="list-grid-cont-4_tittle"> My list </p>
+
+<% @lists.each do |list| %>
+
+  <%= link_to(list) do %>
+    <div class="list-preview-card">
+      <h3><%= list.name %></h3>
+    </div>
+  <% end %>
+
+
+<% end %>
+
+
+</div>

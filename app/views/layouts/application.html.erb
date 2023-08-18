@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+  <header>
+    <nav>
+
+      <p class='logo-header'>film<span>folio</span></p>
+
+      <ul>
+
+      <li> <%= link_to "Add List", new_list_path %></li>
+      <li> <%= link_to "My Lists", lists_path %></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
     <%= yield %>
+  </main>
   </body>
 </html>
