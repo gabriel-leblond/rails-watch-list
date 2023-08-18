@@ -16,13 +16,14 @@ class BookmarksController < ApplicationController
 
   # POST /bookmarks
   def create
+
     @bookmark = Bookmark.new(bookmark_params)
     @list = List.find(params[:list_id])
     @bookmark.list = @list
-    # @movie = Movie.find(params[:movie_id])
+    # @movie = Movie.find(params[:bookmark][:movie_id])
     # @bookmark.movie = @movie
     if @bookmark.save
-      redirect_to @bookmark, notice: 'Bookmark was successfully created.'
+      redirect_to @list, notice: 'Bookmark was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -37,7 +38,7 @@ class BookmarksController < ApplicationController
 
   # Only allow a bookmark of trusted parameters through.
   def bookmark_params
-    params.require(:bookmark).permit(:conmment, :movie_id, :list_id)
+    params.require(:bookmark).permit(:comment, :movie_id)
   end
 
 end

@@ -4,21 +4,67 @@
 
 
 <div class="show-list-heading-grid">
-  <div><p class="list-show-tittle"><%= @lists.name %></p></div>
-  <div class="add-book"><i class="fa-solid fa-circle-plus"></i></div>
+  <div><p class="list-show-tittle"><%= @list.name %></p></div>
+  <div class="add-book" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus"></i>
+  </div>
 </div>
 
 <div class="show-book-grig">
-  <div class=""> Iam a bookmark </div>
-  <div class=""> Iam a groot </div>
+
+
+    <% @list.bookmarks.each do |bookmark| %>
+        <div>
+          <%= image_tag(Movie.find(bookmark.movie_id).poster_url) %>
+
+          <%= Movie.find(bookmark.movie_id).title %>
+
+          <%= Movie.find(bookmark.movie_id).rating %>
+
+          <%= Movie.find(bookmark.movie_id).overview %>
+
+          <%= bookmark.comment %>
+        </div>
+    <% end %>
+
+
 </div>
 
 
 <div class="show-book-review-grid">
   <p class="show-book-review-tittle"> bookmark review </p>
   <div class="show-book-review-flow"> Iam reveiw flow</div>
-  <div class="show-book-review-creat"> Iam reveiw form </div>
+  <div class="show-book-review-creat">
+   </div>
+</div>
+
 </div>
 
 
+
+
+
+
+<!----------------------------------------------------- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for [@list, @bookmark] do |f| %>
+
+          <%= f.input :comment %>
+          <%= f.input :movie_id, collection: Movie.all %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary"><%= f.button :submit %></button>
+         <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+<!----------------------------------------------------- Fin Modal -->

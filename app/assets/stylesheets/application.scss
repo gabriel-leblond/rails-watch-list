@@ -19,6 +19,8 @@ $primary-color: #4300F3;
 $secondary-color: #DC001E;
 $light-color: #d4eced;
 
+$myrad: 2em;
+
 
 html{
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -32,7 +34,7 @@ a{
 
 body{
   background-color: $light-color;
-  color: 131313;
+  // color: 131313;
   font-family: 'Bricolage Grotesque', sans-serif;
 }
 
@@ -170,22 +172,33 @@ font-size: 6em;
   max-height: 128px;
   margin-top: auto;
 
+
   .fa-circle-plus{
     font-size: 4em;
   }
 }
 
+.add-book :hover{
+  color: #cdbcf8;
+  cursor: pointer;
+}
+
+
 // ------ BOOK GRID
 
 .show-book-grig{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
   div{
     background-color: $txt-color;
     color: white;
     padding: 2em;
     border-radius: 2em;
+  }
+  img{
+    width: 100%;
+    border-radius: 2em 2em 0em 0em;
   }
 
 }

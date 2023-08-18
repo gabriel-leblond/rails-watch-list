@@ -7,7 +7,7 @@ class ListsController < ApplicationController
 
   # GET /lists/1
   def show
-
+    @bookmark = Bookmark.new
   end
 
   # GET /lists/new
@@ -18,6 +18,7 @@ class ListsController < ApplicationController
   # POST /lists
   def create
     @list = List.new(list_params)
+    @list.save
     if @list.save
       redirect_to @list, notice: 'List was successfully created.'
     else
@@ -29,7 +30,7 @@ class ListsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_lists
-    @lists = List.find(params[:id])
+    @list = List.find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
