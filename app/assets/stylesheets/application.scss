@@ -76,6 +76,8 @@ color: $txt-color;
 }
 
 
+// $$$$$$$$$$$$$$$$$$$$$$ ------ INDEX ------ $$$$$$$$$$$$$$$$$$$$$$
+
 .hero{
 color: $txt-color;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -93,6 +95,9 @@ main{
   width: 70%;
   margin: 0 auto;
 }
+
+
+// ------ LIST GRID
 
 .list-grid-cont-4{
   background-color: $txt-color;
@@ -128,8 +133,100 @@ right: 0.6em;
   }
 }
 
+// $$$$$$$$$$$$$$$$$$$$$$ ------ SHOW ------ $$$$$$$$$$$$$$$$$$$$$$
+
+// ------ SHOW MAIN CONTAINER
+.show-main-container{
+display: grid;
+grid-template-columns: auto;
+gap: 2em;
+}
+
+
+// ------ HEADING
+
+.show-list-heading-grid{
+display: grid;
+grid-template-columns: 9fr 1fr;
+gap: 2em;
+
+  div{
+    background-color: $primary-color;
+    color: white;
+    padding: 2em;
+    border-radius: 2em;
+  }
+}
 
 .list-show-tittle{
+font-size: 6em;
+}
+
+.add-book{
+
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+  max-height: 128px;
+  margin-top: auto;
+
+  .fa-circle-plus{
+    font-size: 4em;
+  }
+}
+
+// ------ BOOK GRID
+
+.show-book-grig{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  div{
+    background-color: $txt-color;
+    color: white;
+    padding: 2em;
+    border-radius: 2em;
+  }
+
+}
 
 
+// ------ BOOK REVIEW
+
+
+.show-book-review-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  background-color: $txt-color;
+  color: white;
+  padding: 2em;
+  border-radius: 2em;
+  padding-top: 6em;
+  position: relative;
+
+}
+
+
+
+.show-book-review-tittle{
+  color: $light-color;
+  font-size: 4em;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  position: absolute;
+  left: 0.6em;
+
+}
+
+.show-book-review-flow{
+  border-radius: 2em;
+  padding: 2em;
+  min-height: 2em;
+}
+
+.show-book-review-creat{
+  background-color: #4c4c4c;
+  border-radius: 2em;
+  padding: 2em;
+  min-height: 2em;
 }

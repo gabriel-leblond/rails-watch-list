@@ -1,12 +1,24 @@
 
-<p class="list-show-tittle"><%= @lists.name %></p>
+
+<div class="show-main-container">
 
 
+<div class="show-list-heading-grid">
+  <div><p class="list-show-tittle"><%= @lists.name %></p></div>
+  <div class="add-book"><i class="fa-solid fa-circle-plus"></i></div>
+</div>
 
-<%= simple_form_for @bookmark, url: bookmarks_path, method: :post do |f| %>
+<div class="show-book-grig">
+  <div class=""> Iam a bookmark </div>
+  <div class=""> Iam a groot </div>
+</div>
 
-  <%= f.input :comment %>
-  <%= f.button :submit %>
+
+<div class="show-book-review-grid">
+  <p class="show-book-review-tittle"> bookmark review </p>
+  <div class="show-book-review-flow"> Iam reveiw flow</div>
+  <div class="show-book-review-creat"> Iam reveiw form </div>
+</div>
 
 
-<% end %>
+</div>
