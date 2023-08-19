@@ -135,6 +135,24 @@ right: 0.6em;
   }
 }
 
+
+// $$$$$$$$$$$$$$$$$$$$$$ ------ LIST NEW ------ $$$$$$$$$$$$$$$$$$$$$$
+
+
+.new-list-tittle{
+font-family: 'Bricolage Grotesque', sans-serif;
+color: $primary-color;
+font-size: 3em;
+}
+
+
+.new-list-btn{
+border-radius: 2em;
+}
+
+
+
+
 // $$$$$$$$$$$$$$$$$$$$$$ ------ SHOW ------ $$$$$$$$$$$$$$$$$$$$$$
 
 // ------ SHOW MAIN CONTAINER
@@ -155,7 +173,7 @@ gap: 2em;
   div{
     background-color: $primary-color;
     color: white;
-    padding: 2em;
+    padding: 1em;
     border-radius: 2em;
   }
 }
@@ -184,7 +202,7 @@ font-size: 6em;
 }
 
 
-// ------ BOOK GRID
+// ------ BOOKMARK GRID
 
 .show-book-grig{
   display: grid;
@@ -198,13 +216,45 @@ font-size: 6em;
   }
   img{
     width: 100%;
-    border-radius: 2em 2em 0em 0em;
+    border-radius: 2em 2em 2em 0em;
   }
 
 }
 
 
-// ------ BOOK REVIEW
+.trash-icon{
+  color: $secondary-color;
+}
+
+
+//--------MODAL
+
+.modal-title{
+font-size: 3em;
+color: $primary-color;
+}
+.modal-header .btn-close{
+color: $secondary-color;
+}
+
+.modal-content{
+  padding: 2em;
+  border-radius: 2em 2em 2em 0em;
+}
+
+.modal-footer .btn{
+border-radius: 2em;
+}
+
+.modal-footer .btn-primary input{
+padding: 0;
+margin: 0;
+color: white;
+}
+
+
+
+// ------ BOOKARK REVIEW
 
 
 .show-book-review-grid{
